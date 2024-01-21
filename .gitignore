@@ -1,0 +1,34 @@
+# .gitignore
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyz
+*.pyw
+
+# Virtual Environment
+venv/
+
+# PyInstaller
+dist/
+build/
+
+# IDE/Editor-specific
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*.swo
+*.pyc
+*.pyo
+*.pyd
+
+# Miscellaneous
+*.log
+.DS_Store
