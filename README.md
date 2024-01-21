@@ -4,6 +4,7 @@ Script to keep the F key pressed while crafting in palworld
 
 [https://www.pocketpair.jp/palworld](https://www.pocketpair.jp/palworld)
 
+![Example Image](image.png)
 ## Overview
 
 Palworld F Key Pressed Script is a Python script that allows you to toggle the 'F' key on Windows by pressing F10. The script uses the pynput library to capture keyboard events and the pyautogui library to simulate key presses.
