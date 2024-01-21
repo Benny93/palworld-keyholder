@@ -1,6 +1,7 @@
 from pynput import keyboard
 import pyautogui
 import time
+import sys
 
 f_key_pressed = False
 
@@ -16,7 +17,8 @@ def on_press(key):
             print("'F' key released.")
         time.sleep(0.3)  # Debounce to avoid rapid toggling
 
-    elif key == keyboard.Key.esc:
+def on_release(key):
+    if key == keyboard.Key.esc:
         stop_script()
 
 def press_key(key):
@@ -30,8 +32,11 @@ def stop_script():
     if f_key_pressed:
         release_key('f')
         print("'F' key released.")
-    exit()
+    sys.exit()
 
-with keyboard.Listener(on_press=on_press) as listener:
-    print("Press F10 to toggle the 'F' key. Press Esc to exit.")
-    listener.join()
+with keyboard.Listener(on_press=on_press, on_release=on_release) as listener:
+    try:
+        print("Press F10 to toggle the 'F' key. Press Ctrl+C to exit.")
+        listener.join()
+    except KeyboardInterrupt:
+        stop_script()

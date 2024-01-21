@@ -45,7 +45,7 @@ Palworld F Key Pressed Script is a Python script that allows you to toggle the '
 
 2. **Exit the Script:**
 
-   To stop the script, press the Esc key. This will release the 'F' key (if pressed) and exit the script.
+   To stop the script, press strg+c. This will release the 'F' key (if pressed) and exit the script.
 
 ## Building a Standalone Executable (Optional)
 
@@ -60,13 +60,7 @@ If you want to distribute the script as a standalone executable on Windows, you 
 2. **Create the Executable:**
 
    ```bash
-   pyinstaller --onefile main.py --name keyholder
+   pyinstaller --onefile main.py --name keyholder -p .\venv\Lib\site-packages\
    ```
 
    The standalone executable will be located in the `dist` folder.
-
-## Notes
-
-- The script uses the pynput library for capturing key events and the pyautogui library for simulating key presses.
-- The script is set to exit when the Esc key is pressed. You can modify this behavior by updating the `on_press` and `stop_script` functions in the script.
-
