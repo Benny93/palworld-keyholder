@@ -17,6 +17,11 @@ Palworld F Key Pressed Script is a Python script that allows you to toggle the '
 
 ### Installation
 
+Use the standalone executable provided on the release page or
+[here](https://github.com/Benny93/palworld-keyholder/releases/download/1/keyholder.exe)
+
+Or build the script yourself following these steps:
+
 1. **Clone the Repository:**
 
    ```bash
